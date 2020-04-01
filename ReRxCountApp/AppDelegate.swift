@@ -11,8 +11,10 @@ import ReSwift
 
 let mainStore = Store<AppState> (
     reducer: countReducer,
-    state: nil
-    
+    state: nil,
+    middleware: [
+        CountMiddleware().printLog()
+    ]
 )
 
 @UIApplicationMain
