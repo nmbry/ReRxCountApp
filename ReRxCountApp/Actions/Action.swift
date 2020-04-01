@@ -10,3 +10,4 @@ import ReSwift
 
 struct CountActionUp: Action { }
 struct CountActionDown: Action { }
+struct CountActionReset: Action { }

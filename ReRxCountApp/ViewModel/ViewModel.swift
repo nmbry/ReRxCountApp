@@ -17,6 +17,7 @@ class ViewModel: StoreSubscriber {
     // MARK: Input Streams
     let countUpBtnTapped = PublishRelay<Void>()
     let countDownBtnTapped = PublishRelay<Void>()
+    let countResetBtnTapped = PublishRelay<Void>()
     
     // MARK: Output Streams
     private var countLabelStream = PublishRelay<String>()
@@ -52,5 +53,11 @@ class ViewModel: StoreSubscriber {
             .subscribe(onNext: {
                 mainStore.dispatch(CountActionDown())
             }).disposed(by: self.disposeBag!)
+        
+        // MARK: リセットボタン押下時の処理
+        self.countResetBtnTapped
+            .subscribe(onNext: {
+                mainStore.dispatch(CountActionReset())
+            }).disposed(by: disposeBag!)
     }
 }

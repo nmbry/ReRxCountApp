@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9104BBEEF9E4405C114F3A7D /* Pods_ReRxCountApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78031B9C3C6D59D46100D32D /* Pods_ReRxCountApp.framework */; };
+		BD1825B4243481C300A1E191 /* CountMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1825B3243481C300A1E191 /* CountMiddleware.swift */; };
 		BD86BE252433556800113A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86BE242433556800113A07 /* AppDelegate.swift */; };
 		BD86BE272433556800113A07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86BE262433556800113A07 /* SceneDelegate.swift */; };
 		BD86BE292433556800113A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86BE282433556800113A07 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		78031B9C3C6D59D46100D32D /* Pods_ReRxCountApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReRxCountApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1825B3243481C300A1E191 /* CountMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountMiddleware.swift; sourceTree = "<group>"; };
 		BD86BE212433556800113A07 /* ReRxCountApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReRxCountApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD86BE242433556800113A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD86BE262433556800113A07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD1825B22434819800A1E191 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				BD1825B3243481C300A1E191 /* CountMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		BD86BE182433556800113A07 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		BD86BE232433556800113A07 /* ReRxCountApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD1825B22434819800A1E191 /* Middleware */,
 				BDF5C6552433641A00EBF6B5 /* Reducers */,
 				BDF5C654243363F900EBF6B5 /* ViewController */,
 				BDF5C653243363E100EBF6B5 /* ViewModel */,
@@ -265,6 +276,7 @@
 				BDF5C65B2433650000EBF6B5 /* CountReducer.swift in Sources */,
 				BDF5C6572433644200EBF6B5 /* Action.swift in Sources */,
 				BD86BE272433556800113A07 /* SceneDelegate.swift in Sources */,
+				BD1825B4243481C300A1E191 /* CountMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

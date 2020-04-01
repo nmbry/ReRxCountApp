@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var countUpBtn: UIButton!
     @IBOutlet weak var countDownBtn: UIButton!
+    @IBOutlet weak var countResetBtn: UIButton!
     
     private let viewModel = ViewModel()
     private var disposeBag: DisposeBag?
@@ -43,6 +44,11 @@ class ViewController: UIViewController {
         // MARK: カウントダウンボタン
         self.countDownBtn.rx.tap.asSignal()
             .emit(to: viewModel.countDownBtnTapped)
+            .disposed(by: self.disposeBag!)
+        
+        // MARK: リセットボタン
+        self.countResetBtn.rx.tap.asSignal()
+            .emit(to: viewModel.countResetBtnTapped)
             .disposed(by: self.disposeBag!)
     }
     
