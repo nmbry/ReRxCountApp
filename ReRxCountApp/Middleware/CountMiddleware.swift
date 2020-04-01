@@ -22,6 +22,9 @@ struct CountMiddleware {
                     case is CountActionDown:
                         next(action)
                         print("CountAppDown Middleware")
+                    case is CountActionReset:
+                        next(action)
+                        print("CountAppReset Middleware")
                     default:
                         next(action)
                     }
